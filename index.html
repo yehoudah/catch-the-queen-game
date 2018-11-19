@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catch the queen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="logo">
+                <div class="logo__wrapper">
+                    <img src="assets/slices/logo.png" alt="">
+                </div>
+            </div>
+            <div class="heading-text">
+                <h1>Catch the queen and get your Bonus</h1>
+            </div>
+
+            <div class="start-btn">
+                <button id="btn" class="start-btn__button">
+                    <img src="assets/slices/CTA.png" alt="">
+                </button>
+            </div>
+            <!-- <button class="rg_btn" data-rg="cards-deck"> shuffle</button> -->
+            <div class="cards-deck" id="cards-deck">
+
+                <div id="card_5" class="card js-card rg_item">
+                    <div class="card__inner">
+                        <div class="card__side is-active ">
+
+                            <img src="assets/slices/card_5.png" alt="">
+                        </div>
+                        <div class="card__side card__back ">
+
+                            <img src="assets/slices/card_back.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="queen" class="card js-card rg_item">
+                    <div class="card__inner">
+                        <div class="card__side is-active ">
+
+                            <img src="assets/slices/card_Q.png" alt="">
+                        </div>
+                        <div class="card__side card__back ">
+
+                            <img src="assets/slices/card_back.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="card_3" class="card js-card rg_item">
+                    <div class="card__inner">
+                        <div class="card__side is-active ">
+
+                            <img src="assets/slices/card_3.png" alt="">
+                        </div>
+                        <div class="card__side card__back ">
+
+                            <img src="assets/slices/card_back.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="steps">
+                <ul class="steps__grid">
+                    <li class="steps__item">
+                        <img src="assets/slices/01.png" alt="">
+                        <p>See where is the queen</p>
+                    </li>
+                    <li class="steps__item">
+                        <img src="assets/slices/02.png" alt="">
+                        <p>Click "START" to begin</p>
+                    </li>
+                    <li class="steps__item">
+                        <img src="assets/slices/03.png" alt="">
+                        <p>Follow the queen</p>
+                    </li>
+                    <li class="steps__item">
+                        <img src="assets/slices/04.png" alt="">
+                        <p>Pick the card with the queen to get your bonus</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="modal" class="modal">
+
+            <div class="modal-content">
+                <div class="text success">
+                    <p><b>Congrats,</b></p>
+                    <p>You've won</p>
+                    <p>&#163;65 Bingo bonus</p>
+                </div>
+                <div class="text fail">
+                    <p><b>OH NO,</b></p>
+                    <p>You didn't win this round</p>
+                    <p>Try again next time :)</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/rdmgrid.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(function () {
+            $('#cards-deck').rdmGrid();
+        })
+
+
+    </script>
+</body>
+
+</html>

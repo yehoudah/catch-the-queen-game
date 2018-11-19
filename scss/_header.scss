@@ -1,0 +1,27 @@
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    &__wrapper {
+        width: 115px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.heading-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    h1 {
+        font-size: 1.75rem;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        padding: 0 10px;
+        margin: 0;
+    }
+}

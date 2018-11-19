@@ -1,0 +1,23 @@
+.start-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    @media (min-width: 1024px) {
+        margin-bottom: 50px;
+    }
+    &__button {
+        width: 160px;
+        height: 48px;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

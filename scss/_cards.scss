@@ -1,0 +1,49 @@
+
+.cards-deck {
+    display: flex;
+    justify-content: center;   
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 35px;
+    @media (min-width: 1024px) {
+        margin-bottom: 70px;
+    }
+    .card {
+        max-width: 250px;
+        perspective: 1000px;
+        position: relative;
+        padding: 0 10px;
+       
+        @media (min-width: 1024px) {
+            padding: 0 25px;
+        }
+        img {
+            max-width: 195px;
+            width: 100%;
+            height: auto;
+        }
+        &.is-switched {
+            .card__inner {
+                animation: rotate 0.5s linear both;
+            }
+        }
+        &__inner {
+            transform-style: preserve-3d;
+            animation: rotate-inverse 0.5s linear both;
+        }
+        &__side {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            &.is-active {
+                position: static;
+            }
+        }
+        &__back {
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+    }
+}
